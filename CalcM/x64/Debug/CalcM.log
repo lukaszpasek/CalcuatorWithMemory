@@ -1,0 +1,3 @@
+﻿  CalcM.cpp
+C:\PO\CalcM\CalcM\CalcM\CalcM.cpp(14,12): warning C4834: discarding return value of function with 'nodiscard' attribute
+  CalcM.vcxproj -> C:\PO\CalcM\CalcM\x64\Debug\CalcM.exe
