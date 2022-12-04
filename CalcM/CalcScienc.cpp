@@ -42,6 +42,7 @@ string DoOperators(string input,char operators[])
 	int i = 0;
 	string Input = input + '#';
 	string result = "";
+	string resultHelper = "";
 	input = "";
 	while (Input[i] != NULL)
 	{
@@ -53,7 +54,7 @@ string DoOperators(string input,char operators[])
 				while (isNumber(Input[i+1])) input += Input[++i];
 				testCalculator.number2 = stod(input);
 				testCalculator.do_command();
-				result = to_string(testCalculator.number1);
+				resultHelper = to_string(testCalculator.number1);
 				input = "";
 			}
 			else if(isNumber(Input[i]))
@@ -62,6 +63,8 @@ string DoOperators(string input,char operators[])
 			}
 			else
 			{
+				result += resultHelper;
+				resultHelper = "";
 				result += input;
 				input = "";
 			}
