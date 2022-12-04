@@ -23,14 +23,14 @@ double calculator::DIVIDE()
 	}
 	return number1 / number2;
 }
-double calculator::MODULO()
+double calculator::PERCENT()
 {
 	if ((int)number2 == 0)
 	{
 		std::cout << "Nieprawidlowa operacja!Nie mozna dzielic przez 0! Error!\n";
 		return -1;
 	}
-	return (int)number1 % (int)number2;
+	return number2/100 * number1;
 }
 double calculator::SQRT()
 {
@@ -39,7 +39,11 @@ double calculator::SQRT()
 		std::cout << "Nieprawidlowa operacja!Nie ma pierwiastka kwadratowego liczby ujemnej! Error!\n";
 		return -1;
 	}
-	return sqrt(number1);
+	return pow(number1,1/number2);
+}
+double calculator::POW()
+{
+	return pow(number1,number2);
 }
 
 
@@ -82,10 +86,13 @@ void calculator::do_command(bool inMemory)
 		value = DIVIDE();
 		break;
 	case '%':
-		value = MODULO();
+		value = PERCENT();
 		break;
-	case 's':
+	case 'p':
 		value = SQRT();
+		break;
+	case '^':
+		value = POW();
 		break;
 	default:
 		std::cout << "Nieprawidlowa operacja!\n";
@@ -117,10 +124,13 @@ void calculator::do_command()
 		value = DIVIDE();
 		break;
 	case '%':
-		value = MODULO();
+		value = PERCENT();
 		break;
-	case 's':
+	case 'p':
 		value = SQRT();
+		break;
+	case '^':
+		value = POW();
 		break;
 	default:
 		std::cout << "Nieprawidlowa operacja!\n";

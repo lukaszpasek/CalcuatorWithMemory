@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CalcM.cpp" />
+    <ClCompile Include="CalcScienc.cpp" />
     <ClCompile Include="Calculator.cpp" />
   </ItemGroup>
   <ItemGroup>

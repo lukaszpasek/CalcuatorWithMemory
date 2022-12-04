@@ -1,14 +1,14 @@
 #pragma once
 
-
 class calculator
 {
 	double ADD();
 	double SUBTRACT();
 	double MULTIPLY();
 	double DIVIDE();
-	double MODULO();
+	double PERCENT();
 	double SQRT();
+	double POW();
 
 public:
 	calculator();
